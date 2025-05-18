@@ -7,6 +7,10 @@ import {
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { isInitializeRequest } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
+import { config } from "dotenv";
+
+config();
+const PORT = process.env.PORT || 2300;
 
 const app = express();
 app.use(express.json());
@@ -123,7 +127,6 @@ const handleSessionRequest = async (req, res) => {
 app.get("/mcp", handleSessionRequest);
 app.delete("/mcp", handleSessionRequest);
 
-const PORT = 3000;
 app.listen(PORT, () => {
   console.error(`MCP server running at http://localhost:${PORT}/mcp`);
 });
