@@ -10,7 +10,7 @@ import { z } from "zod";
 import { config } from "dotenv";
 
 config();
-const PORT = process.env.PORT || 2300;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
