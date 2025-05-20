@@ -126,6 +126,9 @@ const handleSessionRequest = async (req, res) => {
 
 app.get("/mcp", handleSessionRequest);
 app.delete("/mcp", handleSessionRequest);
+app.get("/", (req, res) => {
+  res.send("MCP server is running. Use /mcp for requests.");
+});
 
 app.listen(PORT, () => {
   console.error(`MCP server running at http://localhost:${PORT}/mcp`);
