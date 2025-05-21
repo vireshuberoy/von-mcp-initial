@@ -1,27 +1,14 @@
 {
-  "name": "mcp_basic",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "build": "babel src --out-dir dist",
-    "build:dev": "babel src --out-dir dist --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.11.4",
-    "dotenv": "^16.5.0",
-    "zod": "^3.24.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.27.2",
-    "@babel/core": "^7.27.1",
-    "@babel/plugin-transform-modules-commonjs": "^7.27.1",
-    "@babel/preset-env": "^7.27.2"
-  }
+    "name": "netlify-example-serverless-mcp",
+    "version": "1.0.0",
+    "description": "A site to show a MCP example using Netlify Functions",
+    "author": "Netlify",
+    "type": "module",
+    "license": "ISC",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.10.2",
+        "@netlify/functions": "^2.5.1",
+        "fetch-to-node": "^2.0.0",
+        "zod": "^3.24.3"
+    }
 }
